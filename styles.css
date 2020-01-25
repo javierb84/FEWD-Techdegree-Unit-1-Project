@@ -1,8 +1,8 @@
 /* Global Layout Set-up */
-* { 
+* {
   box-sizing: border-box;
 }
-  
+
 body {
   margin: 0;
   padding: 0;
@@ -25,12 +25,22 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: black;
+  background: #222222;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
 }
+
+nav {
+  width: 100%;
+  background: #222222;
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -52,12 +62,13 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: white;
+  text-decoration: underline;
 }
 
 header {
   text-align: center;
-  background: url('images/portland.jpg') no-repeat top center ;
+  background: url('images/Computer.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
@@ -65,27 +76,105 @@ header {
 header {
   line-height: 1.5;
 }
+
+/* header for experience.html page */
+.my-header {
+  text-align: center;
+  background: url('images/CPU.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  line-height: 1.5;
+}
+
+/* header for hobbies.html page */
+.my-header2 {
+  text-align: center;
+  background: url('images/nintendo.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+  line-height: 1.5;
+}
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 5px inset darkred;
+  transition: all .6s;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  transform: scale(1.2) rotate(-5deg);
 }
+
+/* For my experience.html page */
+
+header .profile-image2 {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid black;
+  transition: all .75s;
+}
+header .profile-image2:hover {
+  transform: scale(1.5) rotate(360deg);
+}
+
+/* For my hobbies.html page */
+
+header .profile-image3 {
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px double green;
+  transition: all 1s;
+}
+header .profile-image3:hover {
+  transform: scale(.5) rotate(360deg);
+}
+
+.profile-ryu {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.profile-ball {
+  display: inline-block;
+  margin-bottom: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px inset blue;
+  transition: all .5s;
+}
+
 .tag {
-  background-color: #efefef;
+  background-color: rgba(211, 211, 211, .5);
   color: black;
   padding: 10px;
   border-radius: 5px;
   display: table;
   margin: 10px auto;
-} 
+  border: black solid 1px;
+}
+
+.tag2 {
+  background-color: rgba(211, 211, 211, .5);
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  display: table;
+  margin: 30px auto;
+  border: black solid 1px;
+}
+
 .location {
-  background-color: #222;
+  background-color: rgba(34, 34, 2, .5);
   color: yellow;
 }
 .card {
@@ -93,13 +182,29 @@ header .profile-image:hover {
   padding: 20px 40px 40px;
   max-width: 500px;
   text-align: left;
-  background: #fff;
+  background: #ffff99;
   border-bottom: 4px solid #ccc;
   border-radius: 6px;
-  transition: all .5s;
+  transition: all 1s;
+  border: solid black;
 }
 .card:hover {
-  border-color: #ff99ff;
+  border-color: lightseagreen;
+}
+
+section {
+  margin: 30px;
+  padding: 20px 40px 40px;
+  max-width: 500px;
+  text-align: left;
+  background: #ffff99;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all 1s;
+  border: solid black;
+}
+section:hover {
+  border-color: lightseagreen;
 }
 
 ul.skills {
@@ -110,14 +215,22 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #003300;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #000033;
+}
+
+.megamanX {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  height: 80px;
 }
 
 footer {
@@ -151,9 +264,11 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
+/*
 a.twitter {
   background-image: url(images/twitter.svg);
 }
+*/
 a.linkedin {
   background-image: url(images/linkedin.svg);
 }
@@ -167,12 +282,37 @@ a.social:hover {
   clear: both;
 }
 
+/* Extra Styles */
+h2 {
+  text-decoration: underline darkblue;
+}
+
+.p-decor {
+  text-shadow: 1px 1px darkblue;
+}
+
+.navy {
+  width: 110px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.webDev {
+  width: 130px;
+  height: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
-  
+
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
+      display: flex;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
